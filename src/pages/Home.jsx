@@ -25,7 +25,7 @@ const Home = () => {
       setLoading(true);
       try {
         const res = await axios.get(
-          "https://ai-image-backend-flame.vercel.app//api/v1/post"
+          "https://ai-image-backend-flame.vercel.app/api/v1/post"
         );
 
         // res.data.data ---- Array contain all details like name,photo,prompt

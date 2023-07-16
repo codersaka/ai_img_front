@@ -23,7 +23,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         const res = await axios.post(
-          "https://ai-image-backend-flame.vercel.app//api/v1/dalle/generate-img",
+          "https://ai-image-backend-flame.vercel.app/api/v1/dalle/generate-img",
           { prompt: form.prompt }
         );
         setForm({ ...form, photo: `data:image/jpeg;base64,${res.data.photo}` });
@@ -46,7 +46,7 @@ const CreatePost = () => {
 
       try {
         const res = await axios.post(
-          "https://ai-image-backend-flame.vercel.app//api/v1/post/create-post",
+          "https://ai-image-backend-flame.vercel.app/api/v1/post/create-post",
           {
             form,
           }
